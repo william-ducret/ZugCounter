@@ -1,5 +1,5 @@
 # USAGE
-# python detect_circles.py --image game.JPG
+# python zug_counter.py --image game.JPG
 
 # import the necessary packages
 import numpy as np
