@@ -11,7 +11,7 @@ import functions as f
 # Constants
 # -----------------------------------------------------------
 
-IMG_NAME = "game.JPG"
+IMG_NAME = "images/game_ch.JPG"
 BLUE = 0
 GREEN = 1
 RED = 2

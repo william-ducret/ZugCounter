@@ -1,3 +1,4 @@
+# testing area
 
 import numpy as np
 import cv2 as cv
@@ -8,21 +9,20 @@ rng.seed(1)
 
 #-------------------------------
 
-img_original = f.loadImage("game.JPG")
+img_original = f.loadImage("images/game_ch.JPG")
 
 def findBoard(img):
     
     # conversion to gray
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-    # blurying, 3 methods
-    gray_blurry = cv.blur(gray,(5,5))
-    gray_blurry = cv.bilateralFilter(gray, 11, 17, 17)
-    kernel_size = 9
-    gray_blurry = cv.GaussianBlur(gray,(kernel_size, kernel_size),0)
+    
+    # blurying
+    gray_blurry = cv.bilateralFilter(gray, 11, 21, 7)
+    gray_blurry = cv.GaussianBlur(gray,(7, 7),15)
     
     cv.imshow("gray_blurry", gray_blurry)
     
-    flag, thresh = cv.threshold(gray_blurry, 50, 220, cv.THRESH_BINARY)
+    flag, thresh = cv.threshold(gray_blurry, 50, 255, cv.THRESH_BINARY)
     cv.imshow("thresh", thresh)
     
     # Canny edge detector
