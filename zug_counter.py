@@ -11,7 +11,7 @@ import functions as f
 # Constants
 # -----------------------------------------------------------
 
-IMG_NAME = "images/game_ch.JPG"
+IMG_NAME = "images/game_us_1.JPG"
 
 # -----------------------------------------------------------
 # Initialisation
@@ -25,7 +25,8 @@ img_original = f.loadImage(IMG_NAME)
 # Process
 # -----------------------------------------------------------
 
-img_display, mask = f.extractColour(img_original, f.FRAME)
+img_display, mask = f.extractColour(img_original, f.YELLOW)
+img_display, mask = f.extractBoard(img_original)
 
 # -----------------------------------------------------------
 # Result
@@ -35,8 +36,6 @@ result = np.concatenate((img_original, img_display), axis=1)
 
 # show the output image
 cv.imshow("Result", result)
-cv.imshow("Mask", mask)
-
 
 print("- Finished !")
 
