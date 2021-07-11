@@ -30,7 +30,7 @@ img_original = f.loadImage(IMG_NAME)
 # Process
 # -----------------------------------------------------------
 
-img_display, mask = f.extractColour(img_original, YELLOW)
+img_display, mask = f.extractColour(img_original, RED)
 
 # -----------------------------------------------------------
 # Result

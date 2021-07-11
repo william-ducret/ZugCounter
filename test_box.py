@@ -18,11 +18,15 @@ def findBoard(img):
     
     # blurying
     gray_blurry = cv.bilateralFilter(gray, 11, 21, 7)
-    gray_blurry = cv.GaussianBlur(gray,(7, 7),15)
+    gray_blurry = cv.GaussianBlur(gray,(7, 7),13)
     
     cv.imshow("gray_blurry", gray_blurry)
     
     flag, thresh = cv.threshold(gray_blurry, 50, 255, cv.THRESH_BINARY)
+    thresh = cv.adaptiveThreshold(gray_blurry, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY_INV, 59, 20)
+    
+#     flag, thresh = cv.threshold(gray_blurry, 0, 255, cv.THRESH_BINARY_INV | cv.THRESH_OTSU)
+    
     cv.imshow("thresh", thresh)
     
     # Canny edge detector
