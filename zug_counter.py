@@ -12,11 +12,6 @@ import functions as f
 # -----------------------------------------------------------
 
 IMG_NAME = "images/game_ch.JPG"
-BLUE = 0
-GREEN = 1
-RED = 2
-YELLOW = 3
-BLACK = 4
 
 # -----------------------------------------------------------
 # Initialisation
@@ -30,7 +25,7 @@ img_original = f.loadImage(IMG_NAME)
 # Process
 # -----------------------------------------------------------
 
-img_display, mask = f.extractColour(img_original, RED)
+img_display, mask = f.extractColour(img_original, f.FRAME)
 
 # -----------------------------------------------------------
 # Result
@@ -40,6 +35,7 @@ result = np.concatenate((img_original, img_display), axis=1)
 
 # show the output image
 cv.imshow("Result", result)
+cv.imshow("Mask", mask)
 
 
 print("- Finished !")
