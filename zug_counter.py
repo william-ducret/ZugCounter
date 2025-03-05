@@ -11,7 +11,7 @@ import functions as f
 # Constants
 # -----------------------------------------------------------
 
-IMG_NAME = "images/game_us_1.JPG"
+IMG_NAME = "boards/game_us_1.JPG"
 
 # -----------------------------------------------------------
 # Initialisation
