@@ -6,7 +6,7 @@ One must use a camera to take a picture and import it in this code. Using the li
 
 | Item | Status |
 | ----------- | ----------- |
-| Status | Can run, but not finished |
+| Status | In progress |
 | Progession | 20% |
 | Situation | Simple image processing applied (filter), cannot detect the wagons yet|
 
